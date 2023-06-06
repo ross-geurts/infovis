@@ -1,16 +1,15 @@
 # Jupyter Book Test
 
 ## Table of contents
-- [argument1](#arg1)
-- [argument2](#arg2)
+- [argument1](#s1)
+- [argument2](#s2)
 
 
 ## Argument 1
-<a name="arg1"></a>
+<a name="s1"></a>
 
 Here is argument 1
 
-## Argument 2
-<a name="arg2"></a>
-
-Here argument 2
+## Step 1: Install conda
+<a name="s2"></a>
+Argument 2 
