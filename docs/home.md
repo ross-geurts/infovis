@@ -6,7 +6,7 @@
 
 
 ## Argument 1
-<a id="first-arg"></a>
+<a name="first-arg"></a>
 
 Here is argument 1
 
