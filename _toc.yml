@@ -4,4 +4,6 @@
 format: jb-book
 root: docs/home
 chapters:
-- file: docs/test
+- file: docs/data_preprocessed
+- file: docs/arguments_for
+- file: docs/arguments_against
