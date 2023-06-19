@@ -1,9 +1,6 @@
-# Jupyter Book Test
-
-## Table of contents
-* [Introduction](#introduction)
+# Greenhouse Gas Emissions in the Agricultural Sector of the Netherlands
+## An Interactive Data Story
 
 
-## Argument 1
-<a name="introduction"></a>
+## Introduction
 introduction
