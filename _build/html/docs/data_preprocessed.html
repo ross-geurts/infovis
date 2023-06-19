@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>here about dataset and preprocessing of dataset &#8212; Jupyter Book Test</title>
+    <title>Dataset and Preprocessing &#8212; Jupyter Book Test</title>
   
   
   
@@ -65,8 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/data_preprocessed';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="positive arguments farmers" href="arguments_for.html" />
-    <link rel="prev" title="Jupyter Book Test" href="home.html" />
+    <link rel="next" title="In Support of Agriculture" href="arguments_for.html" />
+    <link rel="prev" title="Greenhouse Gas Emissions in the Agricultural Sector of the Netherlands" href="home.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -147,14 +147,14 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="home.html">
-                    Jupyter Book Test
+                    Greenhouse Gas Emissions in the Agricultural Sector of the Netherlands
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">here about dataset and preprocessing of dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="arguments_for.html">positive arguments farmers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="arguments_against.html">negative arguments farmers</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dataset and Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arguments_for.html">In Support of Agriculture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arguments_against.html">Agriculture Needs Change</a></li>
 </ul>
 
     </div>
@@ -356,7 +356,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -367,11 +369,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>here about dataset and preprocessing of dataset</h1>
+    <h1>Dataset and Preprocessing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-greenhouse-gas-emission-in-the-netherlands">Dataset 1 : Greenhouse gas emission in the Netherlands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-greenhouse-gas-emission-around-the-world">Dataset 2 : Greenhouse gas emission around the world</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-statistics-per-country">Dataset 3 : Statistics per Country</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -381,8 +393,528 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="here-about-dataset-and-preprocessing-of-dataset">
-<h1>here about dataset and preprocessing of dataset<a class="headerlink" href="#here-about-dataset-and-preprocessing-of-dataset" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="dataset-and-preprocessing">
+<h1>Dataset and Preprocessing<a class="headerlink" href="#dataset-and-preprocessing" title="Permalink to this heading">#</a></h1>
+<section id="dataset-1-greenhouse-gas-emission-in-the-netherlands">
+<h2>Dataset 1 : Greenhouse gas emission in the Netherlands<a class="headerlink" href="#dataset-1-greenhouse-gas-emission-in-the-netherlands" title="Permalink to this heading">#</a></h2>
+<p>This dataset includes emissions of the gases carbon dioxide, methane, and nitrogen in the Netherlands from 1990 up until 2017. The data is ordered by emission source, such as pharmaceutical industry, households, agriculture and fishery. The emissions themselves are measured in million kilograms, and are ratio values. This dataset can be used to calculate increase in greenhouse gas emissions and compare against datasets of the emissions of other countries. The dataset was taken from <a href='https://www.kaggle.com/datasets/janheindejong/greenhouse-gas-emissions-in-the-netherlands?select=IPCC_emissions.csv'> Kaggle </a> and needed to be seperated by semicolon to be deemed usable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df_greenhouse</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../datasets/IPCC_emissions.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+<span class="n">df_greenhouse</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>Bronnen</th>
+      <th>Perioden</th>
+      <th>CO2_1</th>
+      <th>CH4_2</th>
+      <th>N2O_3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>T001176</td>
+      <td>1990JJ00</td>
+      <td>163120</td>
+      <td>1278.17</td>
+      <td>59.49</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>T001176</td>
+      <td>1995JJ00</td>
+      <td>173520</td>
+      <td>1192.41</td>
+      <td>59.84</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>T001176</td>
+      <td>2000JJ00</td>
+      <td>172290</td>
+      <td>975.64</td>
+      <td>53.01</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>T001176</td>
+      <td>2001JJ00</td>
+      <td>177390</td>
+      <td>949.16</td>
+      <td>49.71</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>T001176</td>
+      <td>2002JJ00</td>
+      <td>176670</td>
+      <td>904.27</td>
+      <td>47.01</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="dataset-2-greenhouse-gas-emission-around-the-world">
+<h2>Dataset 2 : Greenhouse gas emission around the world<a class="headerlink" href="#dataset-2-greenhouse-gas-emission-around-the-world" title="Permalink to this heading">#</a></h2>
+<p>This dataset includes data about the greenhouse gas emissions from various countries in the world like Australia or France, and certain areas like the European Union from the years 1990 up to 2014. The gases of which the emissions are measured are among others, nitrogen, carbon dioxide, sulphur and methane, along with a total of all GHG gas emission, which are categorical values. The values of the emission themselves are ratio values and are measured in million kilograms. The dataset was taken from <a href='https://www.kaggle.com/datasets/unitednations/international-greenhouse-gas-emissions'>Kaggle</a> and did not need to be cleaned up.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_gas_emission</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../datasets/greenhouse_gas_inventory_data_data.csv&quot;</span><span class="p">)</span>
+<span class="n">df_gas_emission</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country_or_area</th>
+      <th>year</th>
+      <th>value</th>
+      <th>category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Australia</td>
+      <td>2014</td>
+      <td>393126.946994</td>
+      <td>carbon_dioxide_co2_emissions_without_land_use_...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Australia</td>
+      <td>2013</td>
+      <td>396913.936530</td>
+      <td>carbon_dioxide_co2_emissions_without_land_use_...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Australia</td>
+      <td>2012</td>
+      <td>406462.847704</td>
+      <td>carbon_dioxide_co2_emissions_without_land_use_...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Australia</td>
+      <td>2011</td>
+      <td>403705.528314</td>
+      <td>carbon_dioxide_co2_emissions_without_land_use_...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Australia</td>
+      <td>2010</td>
+      <td>406200.993184</td>
+      <td>carbon_dioxide_co2_emissions_without_land_use_...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="dataset-3-statistics-per-country">
+<h2>Dataset 3 : Statistics per Country<a class="headerlink" href="#dataset-3-statistics-per-country" title="Permalink to this heading">#</a></h2>
+<p>This dataset shows several different statistics from nearly every county in de United Nations in 2017. Some of these 50 statistics are population, GDP, agriculture economy, internet use, and emission estimates. The values of these variables are denoted in their name, like number, percent or square kilometer, and are nominal, ordinal or ratio values. The dataset was not preprocessed before it was used and can be found on <a href='https://www.kaggle.com/datasets/sudalairajkumar/undata-country-profiles?select=kiva_country_profile_variables.csv'>Kaggle</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_profile</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../datasets/country_profile_variables.csv&quot;</span><span class="p">)</span>
+<span class="n">country_profile</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>Region</th>
+      <th>Surface area (km2)</th>
+      <th>Population in thousands (2017)</th>
+      <th>Population density (per km2, 2017)</th>
+      <th>Sex ratio (m per 100 f, 2017)</th>
+      <th>GDP: Gross domestic product (million current US$)</th>
+      <th>GDP growth rate (annual %, const. 2005 prices)</th>
+      <th>GDP per capita (current US$)</th>
+      <th>Economy: Agriculture (% of GVA)</th>
+      <th>...</th>
+      <th>Mobile-cellular subscriptions (per 100 inhabitants).1</th>
+      <th>Individuals using the Internet (per 100 inhabitants)</th>
+      <th>Threatened species (number)</th>
+      <th>Forested area (% of land area)</th>
+      <th>CO2 emission estimates (million tons/tons per capita)</th>
+      <th>Energy production, primary (Petajoules)</th>
+      <th>Energy supply per capita (Gigajoules)</th>
+      <th>Pop. using improved drinking water (urban/rural, %)</th>
+      <th>Pop. using improved sanitation facilities (urban/rural, %)</th>
+      <th>Net Official Development Assist. received (% of GNI)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Afghanistan</td>
+      <td>SouthernAsia</td>
+      <td>652864</td>
+      <td>35530</td>
+      <td>54.4</td>
+      <td>106.3</td>
+      <td>20270</td>
+      <td>-2.4</td>
+      <td>623.2</td>
+      <td>23.3</td>
+      <td>...</td>
+      <td>8.3</td>
+      <td>42</td>
+      <td>2.1</td>
+      <td>9.8/0.3</td>
+      <td>63</td>
+      <td>5</td>
+      <td>78.2/47.0</td>
+      <td>45.1/27.0</td>
+      <td>21.43</td>
+      <td>-99</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Albania</td>
+      <td>SouthernEurope</td>
+      <td>28748</td>
+      <td>2930</td>
+      <td>106.9</td>
+      <td>101.9</td>
+      <td>11541</td>
+      <td>2.6</td>
+      <td>3984.2</td>
+      <td>22.4</td>
+      <td>...</td>
+      <td>63.3</td>
+      <td>130</td>
+      <td>28.2</td>
+      <td>5.7/2.0</td>
+      <td>84</td>
+      <td>36</td>
+      <td>94.9/95.2</td>
+      <td>95.5/90.2</td>
+      <td>2.96</td>
+      <td>-99</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Algeria</td>
+      <td>NorthernAfrica</td>
+      <td>2381741</td>
+      <td>41318</td>
+      <td>17.3</td>
+      <td>102.0</td>
+      <td>164779</td>
+      <td>3.8</td>
+      <td>4154.1</td>
+      <td>12.2</td>
+      <td>...</td>
+      <td>38.2</td>
+      <td>135</td>
+      <td>0.8</td>
+      <td>145.4/3.7</td>
+      <td>5900</td>
+      <td>55</td>
+      <td>84.3/81.8</td>
+      <td>89.8/82.2</td>
+      <td>0.05</td>
+      <td>-99</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>American Samoa</td>
+      <td>Polynesia</td>
+      <td>199</td>
+      <td>56</td>
+      <td>278.2</td>
+      <td>103.6</td>
+      <td>-99</td>
+      <td>-99</td>
+      <td>-99.0</td>
+      <td>-99</td>
+      <td>...</td>
+      <td>-99</td>
+      <td>92</td>
+      <td>87.9</td>
+      <td>-99</td>
+      <td>-99</td>
+      <td>-99</td>
+      <td>100.0/100.0</td>
+      <td>62.5/62.5</td>
+      <td>-99</td>
+      <td>-99</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Andorra</td>
+      <td>SouthernEurope</td>
+      <td>468</td>
+      <td>77</td>
+      <td>163.8</td>
+      <td>102.3</td>
+      <td>2812</td>
+      <td>0.8</td>
+      <td>39896.4</td>
+      <td>0.5</td>
+      <td>...</td>
+      <td>96.9</td>
+      <td>13</td>
+      <td>34.0</td>
+      <td>0.5/6.4</td>
+      <td>1</td>
+      <td>119</td>
+      <td>100.0/100.0</td>
+      <td>100.0/100.0</td>
+      <td>-99</td>
+      <td>-99</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 50 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kiva_country_profile</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../datasets/kiva_country_profile_variables.csv&quot;</span><span class="p">)</span>
+<span class="n">kiva_country_profile</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>Region</th>
+      <th>Surface area (km2)</th>
+      <th>Population in thousands (2017)</th>
+      <th>Population density (per km2, 2017)</th>
+      <th>Sex ratio (m per 100 f, 2017)</th>
+      <th>GDP: Gross domestic product (million current US$)</th>
+      <th>GDP growth rate (annual %, const. 2005 prices)</th>
+      <th>GDP per capita (current US$)</th>
+      <th>Economy: Agriculture (% of GVA)</th>
+      <th>...</th>
+      <th>Mobile-cellular subscriptions (per 100 inhabitants).1</th>
+      <th>Individuals using the Internet (per 100 inhabitants)</th>
+      <th>Threatened species (number)</th>
+      <th>Forested area (% of land area)</th>
+      <th>CO2 emission estimates (million tons/tons per capita)</th>
+      <th>Energy production, primary (Petajoules)</th>
+      <th>Energy supply per capita (Gigajoules)</th>
+      <th>Pop. using improved drinking water (urban/rural, %)</th>
+      <th>Pop. using improved sanitation facilities (urban/rural, %)</th>
+      <th>Net Official Development Assist. received (% of GNI)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Afghanistan</td>
+      <td>SouthernAsia</td>
+      <td>652864</td>
+      <td>35530</td>
+      <td>54.4</td>
+      <td>106.3</td>
+      <td>20270</td>
+      <td>-2.4</td>
+      <td>623.2</td>
+      <td>23.3</td>
+      <td>...</td>
+      <td>8.3</td>
+      <td>42</td>
+      <td>2.1</td>
+      <td>9.8/0.3</td>
+      <td>63</td>
+      <td>5</td>
+      <td>78.2/47.0</td>
+      <td>45.1/27.0</td>
+      <td>21.43</td>
+      <td>-99</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Albania</td>
+      <td>SouthernEurope</td>
+      <td>28748</td>
+      <td>2930</td>
+      <td>106.9</td>
+      <td>101.9</td>
+      <td>11541</td>
+      <td>2.6</td>
+      <td>3984.2</td>
+      <td>22.4</td>
+      <td>...</td>
+      <td>63.3</td>
+      <td>130</td>
+      <td>28.2</td>
+      <td>5.7/2.0</td>
+      <td>84</td>
+      <td>36</td>
+      <td>94.9/95.2</td>
+      <td>95.5/90.2</td>
+      <td>2.96</td>
+      <td>-99</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Armenia</td>
+      <td>WesternAsia</td>
+      <td>29743</td>
+      <td>2930</td>
+      <td>102.9</td>
+      <td>88.8</td>
+      <td>10529</td>
+      <td>3.0</td>
+      <td>3489.1</td>
+      <td>19.0</td>
+      <td>...</td>
+      <td>58.2</td>
+      <td>114</td>
+      <td>11.7</td>
+      <td>5.5/1.8</td>
+      <td>48</td>
+      <td>46</td>
+      <td>100.0/100.0</td>
+      <td>96.2/78.2</td>
+      <td>3.17</td>
+      <td>-99</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Azerbaijan</td>
+      <td>WesternAsia</td>
+      <td>86600</td>
+      <td>9828</td>
+      <td>118.9</td>
+      <td>99.3</td>
+      <td>53049</td>
+      <td>0.7</td>
+      <td>5438.7</td>
+      <td>6.7</td>
+      <td>...</td>
+      <td>77.0</td>
+      <td>97</td>
+      <td>13.5</td>
+      <td>37.5/3.9</td>
+      <td>2459</td>
+      <td>61</td>
+      <td>94.7/77.8</td>
+      <td>91.6/86.6</td>
+      <td>0.14</td>
+      <td>-99</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Belize</td>
+      <td>CentralAmerica</td>
+      <td>22966</td>
+      <td>375</td>
+      <td>16.4</td>
+      <td>99.2</td>
+      <td>1721</td>
+      <td>1.2</td>
+      <td>4789.4</td>
+      <td>14.6</td>
+      <td>...</td>
+      <td>41.6</td>
+      <td>117</td>
+      <td>60.1</td>
+      <td>0.5/1.4</td>
+      <td>9</td>
+      <td>36</td>
+      <td>98.9/100.0</td>
+      <td>93.5/88.2</td>
+      <td>1.68</td>
+      <td>-99</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 50 columns</p>
+</div></div></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -422,7 +954,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Jupyter Book Test</p>
+        <p class="prev-next-title">Greenhouse Gas Emissions in the Agricultural Sector of the Netherlands</p>
       </div>
     </a>
     <a class="right-next"
@@ -430,7 +962,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">positive arguments farmers</p>
+        <p class="prev-next-title">In Support of Agriculture</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -443,6 +975,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-greenhouse-gas-emission-in-the-netherlands">Dataset 1 : Greenhouse gas emission in the Netherlands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-greenhouse-gas-emission-around-the-world">Dataset 2 : Greenhouse gas emission around the world</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-statistics-per-country">Dataset 3 : Statistics per Country</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
