@@ -382,6 +382,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-greenhouse-gas-emission-in-the-netherlands">Dataset 1 : Greenhouse gas emission in the Netherlands</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-greenhouse-gas-emission-around-the-world">Dataset 2 : Greenhouse gas emission around the world</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-statistics-per-country">Dataset 3 : Statistics per Country</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-4-global-air-pollution">Dataset 4 : Global Air Pollution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-5-agricultural-companies-in-the-netherlands">Dataset 5 : Agricultural companies in the Netherlands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-6">Dataset 6 :</a></li>
 </ul>
             </nav>
         </div>
@@ -563,11 +566,11 @@ document.write(`
 </section>
 <section id="dataset-3-statistics-per-country">
 <h2>Dataset 3 : Statistics per Country<a class="headerlink" href="#dataset-3-statistics-per-country" title="Permalink to this heading">#</a></h2>
-<p>This dataset shows several different statistics from nearly every county in de United Nations in 2017. Some of these 50 statistics are population, GDP, agriculture economy, internet use, and emission estimates. The values of these variables are denoted in their name, like number, percent or square kilometer, and are nominal, ordinal or ratio values. The dataset was not preprocessed before it was used and can be found on <a href='https://www.kaggle.com/datasets/sudalairajkumar/undata-country-profiles?select=kiva_country_profile_variables.csv'>Kaggle</a>.</p>
+<p>This dataset shows several different statistics from nearly every county in de United Nations in 2017. Some of these 50 statistics are population, GDP, agriculture economy, internet use, and emission estimates. The values of these variables are denoted in their name, like number, percent or square kilometer, and are nominal, ordinal or ratio values. The dataset was preprocessed to include only a few relevant European countries before it was used and can be found on <a href='https://www.kaggle.com/datasets/sudalairajkumar/undata-country-profiles?select=kiva_country_profile_variables.csv'>Kaggle</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_profile</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../datasets/country_profile_variables.csv&quot;</span><span class="p">)</span>
-<span class="n">country_profile</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eu_country_profile</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../datasets/EUonly_country_profile_variables.csv&quot;</span><span class="p">)</span>
+<span class="n">eu_country_profile</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -590,7 +593,7 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>country</th>
+      <th>location</th>
       <th>Region</th>
       <th>Surface area (km2)</th>
       <th>Population in thousands (2017)</th>
@@ -616,30 +619,6 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>Afghanistan</td>
-      <td>SouthernAsia</td>
-      <td>652864</td>
-      <td>35530</td>
-      <td>54.4</td>
-      <td>106.3</td>
-      <td>20270</td>
-      <td>-2.4</td>
-      <td>623.2</td>
-      <td>23.3</td>
-      <td>...</td>
-      <td>8.3</td>
-      <td>42</td>
-      <td>2.1</td>
-      <td>9.8/0.3</td>
-      <td>63</td>
-      <td>5</td>
-      <td>78.2/47.0</td>
-      <td>45.1/27.0</td>
-      <td>21.43</td>
-      <td>-99</td>
-    </tr>
-    <tr>
-      <th>1</th>
       <td>Albania</td>
       <td>SouthernEurope</td>
       <td>28748</td>
@@ -663,74 +642,98 @@ document.write(`
       <td>-99</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>Algeria</td>
-      <td>NorthernAfrica</td>
-      <td>2381741</td>
-      <td>41318</td>
-      <td>17.3</td>
-      <td>102.0</td>
-      <td>164779</td>
-      <td>3.8</td>
-      <td>4154.1</td>
-      <td>12.2</td>
+      <th>1</th>
+      <td>Belgium</td>
+      <td>WesternEurope</td>
+      <td>30528</td>
+      <td>11429</td>
+      <td>377.5</td>
+      <td>97.3</td>
+      <td>455107</td>
+      <td>1.5</td>
+      <td>40277.8</td>
+      <td>0.7</td>
       <td>...</td>
-      <td>38.2</td>
-      <td>135</td>
-      <td>0.8</td>
-      <td>145.4/3.7</td>
-      <td>5900</td>
-      <td>55</td>
-      <td>84.3/81.8</td>
-      <td>89.8/82.2</td>
-      <td>0.05</td>
+      <td>85.1</td>
+      <td>37</td>
+      <td>22.6</td>
+      <td>93.4/8.3</td>
+      <td>520</td>
+      <td>196</td>
+      <td>100.0/100.0</td>
+      <td>99.5/99.4</td>
+      <td>-99</td>
+      <td>-99</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Croatia</td>
+      <td>SouthernEurope</td>
+      <td>56594</td>
+      <td>4189</td>
+      <td>74.9</td>
+      <td>93.1</td>
+      <td>48676</td>
+      <td>1.6</td>
+      <td>11479.4</td>
+      <td>4.1</td>
+      <td>...</td>
+      <td>69.8</td>
+      <td>176</td>
+      <td>34.3</td>
+      <td>16.8/4.0</td>
+      <td>182</td>
+      <td>79</td>
+      <td>99.6/99.7</td>
+      <td>97.8/95.8</td>
+      <td>...</td>
       <td>-99</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>American Samoa</td>
-      <td>Polynesia</td>
-      <td>199</td>
-      <td>56</td>
-      <td>278.2</td>
-      <td>103.6</td>
-      <td>-99</td>
-      <td>-99</td>
-      <td>-99.0</td>
-      <td>-99</td>
+      <td>Denmark</td>
+      <td>NorthernEurope</td>
+      <td>42921</td>
+      <td>5734</td>
+      <td>135.1</td>
+      <td>99.0</td>
+      <td>301308</td>
+      <td>1.6</td>
+      <td>53149.3</td>
+      <td>1.2</td>
       <td>...</td>
-      <td>-99</td>
-      <td>92</td>
-      <td>87.9</td>
-      <td>-99</td>
-      <td>-99</td>
-      <td>-99</td>
+      <td>96.3</td>
+      <td>47</td>
+      <td>14.4</td>
+      <td>33.5/5.9</td>
+      <td>666</td>
+      <td>119</td>
       <td>100.0/100.0</td>
-      <td>62.5/62.5</td>
+      <td>99.6/99.6</td>
       <td>-99</td>
       <td>-99</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Andorra</td>
-      <td>SouthernEurope</td>
-      <td>468</td>
-      <td>77</td>
-      <td>163.8</td>
-      <td>102.3</td>
-      <td>2812</td>
-      <td>0.8</td>
-      <td>39896.4</td>
-      <td>0.5</td>
+      <td>Estonia</td>
+      <td>NorthernEurope</td>
+      <td>45227</td>
+      <td>1310</td>
+      <td>30.9</td>
+      <td>88.2</td>
+      <td>22460</td>
+      <td>1.4</td>
+      <td>17112.0</td>
+      <td>3.4</td>
       <td>...</td>
-      <td>96.9</td>
-      <td>13</td>
-      <td>34.0</td>
-      <td>0.5/6.4</td>
-      <td>1</td>
-      <td>119</td>
-      <td>100.0/100.0</td>
-      <td>100.0/100.0</td>
+      <td>88.4</td>
+      <td>23</td>
+      <td>52.7</td>
+      <td>19.5/14.8</td>
+      <td>242</td>
+      <td>193</td>
+      <td>100.0/99.0</td>
+      <td>97.5/96.6</td>
       <td>-99</td>
       <td>-99</td>
     </tr>
@@ -739,10 +742,14 @@ document.write(`
 <p>5 rows × 50 columns</p>
 </div></div></div>
 </div>
+</section>
+<section id="dataset-4-global-air-pollution">
+<h2>Dataset 4 : Global Air Pollution<a class="headerlink" href="#dataset-4-global-air-pollution" title="Permalink to this heading">#</a></h2>
+<p>This dataset contains geolocated data on greenhouse gas emissions and AQI of air pollution of large cities in nearly all countries. Some of the attributes are the overall AQI value and category, as well as the AQI value and category for the gases N2O, CO and the Ozone. The dataset can be used to compare air pollution between different countries. The dataset shown here was not processed, but was cleaned before using by grouping the data by country and aggregating the temperature values. The dataset can be found on <a href='https://www.kaggle.com/datasets/hasibalmuzdadid/global-air-pollution-dataset'>Kaggle</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kiva_country_profile</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../datasets/kiva_country_profile_variables.csv&quot;</span><span class="p">)</span>
-<span class="n">kiva_country_profile</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_pollution</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../datasets/global_air_pollution_dataset.csv&quot;</span><span class="p">)</span>
+<span class="n">df_pollution</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -765,153 +772,377 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>country</th>
-      <th>Region</th>
-      <th>Surface area (km2)</th>
-      <th>Population in thousands (2017)</th>
-      <th>Population density (per km2, 2017)</th>
-      <th>Sex ratio (m per 100 f, 2017)</th>
-      <th>GDP: Gross domestic product (million current US$)</th>
-      <th>GDP growth rate (annual %, const. 2005 prices)</th>
-      <th>GDP per capita (current US$)</th>
-      <th>Economy: Agriculture (% of GVA)</th>
-      <th>...</th>
-      <th>Mobile-cellular subscriptions (per 100 inhabitants).1</th>
-      <th>Individuals using the Internet (per 100 inhabitants)</th>
-      <th>Threatened species (number)</th>
-      <th>Forested area (% of land area)</th>
-      <th>CO2 emission estimates (million tons/tons per capita)</th>
-      <th>Energy production, primary (Petajoules)</th>
-      <th>Energy supply per capita (Gigajoules)</th>
-      <th>Pop. using improved drinking water (urban/rural, %)</th>
-      <th>Pop. using improved sanitation facilities (urban/rural, %)</th>
-      <th>Net Official Development Assist. received (% of GNI)</th>
+      <th>Country</th>
+      <th>City</th>
+      <th>AQI Value</th>
+      <th>AQI Category</th>
+      <th>CO AQI Value</th>
+      <th>CO AQI Category</th>
+      <th>Ozone AQI Value</th>
+      <th>Ozone AQI Category</th>
+      <th>NO2 AQI Value</th>
+      <th>NO2 AQI Category</th>
+      <th>PM2.5 AQI Value</th>
+      <th>PM2.5 AQI Category</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>Afghanistan</td>
-      <td>SouthernAsia</td>
-      <td>652864</td>
-      <td>35530</td>
-      <td>54.4</td>
-      <td>106.3</td>
-      <td>20270</td>
-      <td>-2.4</td>
-      <td>623.2</td>
-      <td>23.3</td>
-      <td>...</td>
-      <td>8.3</td>
-      <td>42</td>
-      <td>2.1</td>
-      <td>9.8/0.3</td>
-      <td>63</td>
-      <td>5</td>
-      <td>78.2/47.0</td>
-      <td>45.1/27.0</td>
-      <td>21.43</td>
-      <td>-99</td>
+      <td>Russian Federation</td>
+      <td>Praskoveya</td>
+      <td>51</td>
+      <td>Moderate</td>
+      <td>1</td>
+      <td>Good</td>
+      <td>36</td>
+      <td>Good</td>
+      <td>0</td>
+      <td>Good</td>
+      <td>51</td>
+      <td>Moderate</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Albania</td>
-      <td>SouthernEurope</td>
-      <td>28748</td>
-      <td>2930</td>
-      <td>106.9</td>
-      <td>101.9</td>
-      <td>11541</td>
-      <td>2.6</td>
-      <td>3984.2</td>
-      <td>22.4</td>
-      <td>...</td>
-      <td>63.3</td>
-      <td>130</td>
-      <td>28.2</td>
-      <td>5.7/2.0</td>
-      <td>84</td>
-      <td>36</td>
-      <td>94.9/95.2</td>
-      <td>95.5/90.2</td>
-      <td>2.96</td>
-      <td>-99</td>
+      <td>Brazil</td>
+      <td>Presidente Dutra</td>
+      <td>41</td>
+      <td>Good</td>
+      <td>1</td>
+      <td>Good</td>
+      <td>5</td>
+      <td>Good</td>
+      <td>1</td>
+      <td>Good</td>
+      <td>41</td>
+      <td>Good</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Armenia</td>
-      <td>WesternAsia</td>
-      <td>29743</td>
-      <td>2930</td>
-      <td>102.9</td>
-      <td>88.8</td>
-      <td>10529</td>
-      <td>3.0</td>
-      <td>3489.1</td>
-      <td>19.0</td>
-      <td>...</td>
-      <td>58.2</td>
-      <td>114</td>
-      <td>11.7</td>
-      <td>5.5/1.8</td>
-      <td>48</td>
-      <td>46</td>
-      <td>100.0/100.0</td>
-      <td>96.2/78.2</td>
-      <td>3.17</td>
-      <td>-99</td>
+      <td>Italy</td>
+      <td>Priolo Gargallo</td>
+      <td>66</td>
+      <td>Moderate</td>
+      <td>1</td>
+      <td>Good</td>
+      <td>39</td>
+      <td>Good</td>
+      <td>2</td>
+      <td>Good</td>
+      <td>66</td>
+      <td>Moderate</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Azerbaijan</td>
-      <td>WesternAsia</td>
-      <td>86600</td>
-      <td>9828</td>
-      <td>118.9</td>
-      <td>99.3</td>
-      <td>53049</td>
-      <td>0.7</td>
-      <td>5438.7</td>
-      <td>6.7</td>
-      <td>...</td>
-      <td>77.0</td>
-      <td>97</td>
-      <td>13.5</td>
-      <td>37.5/3.9</td>
-      <td>2459</td>
-      <td>61</td>
-      <td>94.7/77.8</td>
-      <td>91.6/86.6</td>
-      <td>0.14</td>
-      <td>-99</td>
+      <td>Poland</td>
+      <td>Przasnysz</td>
+      <td>34</td>
+      <td>Good</td>
+      <td>1</td>
+      <td>Good</td>
+      <td>34</td>
+      <td>Good</td>
+      <td>0</td>
+      <td>Good</td>
+      <td>20</td>
+      <td>Good</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Belize</td>
-      <td>CentralAmerica</td>
-      <td>22966</td>
-      <td>375</td>
-      <td>16.4</td>
-      <td>99.2</td>
-      <td>1721</td>
-      <td>1.2</td>
-      <td>4789.4</td>
-      <td>14.6</td>
-      <td>...</td>
-      <td>41.6</td>
-      <td>117</td>
-      <td>60.1</td>
-      <td>0.5/1.4</td>
-      <td>9</td>
-      <td>36</td>
-      <td>98.9/100.0</td>
-      <td>93.5/88.2</td>
-      <td>1.68</td>
-      <td>-99</td>
+      <td>France</td>
+      <td>Punaauia</td>
+      <td>22</td>
+      <td>Good</td>
+      <td>0</td>
+      <td>Good</td>
+      <td>22</td>
+      <td>Good</td>
+      <td>0</td>
+      <td>Good</td>
+      <td>6</td>
+      <td>Good</td>
     </tr>
   </tbody>
 </table>
-<p>5 rows × 50 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="dataset-5-agricultural-companies-in-the-netherlands">
+<h2>Dataset 5 : Agricultural companies in the Netherlands<a class="headerlink" href="#dataset-5-agricultural-companies-in-the-netherlands" title="Permalink to this heading">#</a></h2>
+<p>This dataset includes data on the agricultural companies in the Netherlands over the period of 1851-2022. Some variables include the number of companies, the number of companies in livestock and the meat or wheat production. The dataset was preprocessed by appending ‘JJ00’ to the years in the ‘Perioden’ column, as that simplified the comparison between this dataset and dataset 1. The dataset can be found on the website of the <a href='https://www.cbs.nl/nl-nl/cijfers/detail/71904ned#'>Centraal Bureau voor Statistiek</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_agr_comp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../datasets/table__71904ned.csv&#39;</span><span class="p">)</span>
+<span class="n">df_agr_comp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Perioden</th>
+      <th>Bedrijven Alle bedrijven (x 1 000)</th>
+      <th>Bedrijven met akkerbouw (x 1 000)</th>
+      <th>Bedrijven met tuinbouw open grond (x 1 000)</th>
+      <th>Bedrijven met tuinbouw onder glas (x 1 000)</th>
+      <th>Bedrijven met grasland (x 1 000)</th>
+      <th>Bedrijven met rundvee</th>
+      <th>Bedrijven met varkens</th>
+      <th>Arbeidskrachten Totaal arbeidskrachten\nArbeidskrachten, totaal (x 1 000)</th>
+      <th>Gezinsarbeidskrachten Totaal gezinsarbeidskrachten\nGezinsarbeidskrachten, totaal (x 1 000)</th>
+      <th>...</th>
+      <th>Granen Tarwe, winter (mln kg)</th>
+      <th>Granen Tarwe, zomer (mln kg)</th>
+      <th>Handelsgewassen Koolzaad (mln kg)</th>
+      <th>Peulvruchten Bruine bonen (mln kg)</th>
+      <th>Opbrengst gewassen Suikerbieten (mln kg)</th>
+      <th>Opbrengst gewassen Zaaiuien (mln kg)</th>
+      <th>Dierlijke productie Melk\nMelk afgeleverd aan fabrieken (mln kg)</th>
+      <th>Vlees Rundvlees (mln kg)</th>
+      <th>Vlees Varkensvlees (mln kg)</th>
+      <th>Zuivelproducten Gecondenseerde melk (mln kg)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1851JJ00</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>...</td>
+      <td>.</td>
+      <td>.</td>
+      <td>60.0</td>
+      <td>5</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1900JJ00</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>...</td>
+      <td>.</td>
+      <td>.</td>
+      <td>2.0</td>
+      <td>10</td>
+      <td>1.509</td>
+      <td>.</td>
+      <td>851</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1950JJ00</td>
+      <td>410</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+      <td>242</td>
+      <td>216</td>
+      <td>271</td>
+      <td>.</td>
+      <td>.</td>
+      <td>...</td>
+      <td>273</td>
+      <td>21</td>
+      <td>45.0</td>
+      <td>15</td>
+      <td>2.718</td>
+      <td>208</td>
+      <td>4.766</td>
+      <td>140</td>
+      <td>236</td>
+      <td>172</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1960JJ00</td>
+      <td>301</td>
+      <td>193</td>
+      <td>.</td>
+      <td>.</td>
+      <td>215</td>
+      <td>200</td>
+      <td>146</td>
+      <td>.</td>
+      <td>.</td>
+      <td>...</td>
+      <td>434</td>
+      <td>156</td>
+      <td>8.0</td>
+      <td>9</td>
+      <td>4.676</td>
+      <td>155</td>
+      <td>6.068</td>
+      <td>236</td>
+      <td>413</td>
+      <td>386</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1970JJ00</td>
+      <td>185</td>
+      <td>96</td>
+      <td>53</td>
+      <td>20</td>
+      <td>141</td>
+      <td>131</td>
+      <td>76</td>
+      <td>.</td>
+      <td>.</td>
+      <td>...</td>
+      <td>509</td>
+      <td>131</td>
+      <td>22.0</td>
+      <td>11</td>
+      <td>4.711</td>
+      <td>331</td>
+      <td>7.748</td>
+      <td>250</td>
+      <td>700</td>
+      <td>495</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 58 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="dataset-6">
+<h2>Dataset 6 :<a class="headerlink" href="#dataset-6" title="Permalink to this heading">#</a></h2>
+<p>This dataset describes the import income and export income of goods from the Netherlands to countries inside or outside Europe. The dataset is separated by categories such as  meat/meat products, fruit/vegetables, ect, and it includes data from 2021 and 2022. The dataset was not preprocessed and can be found on the website of the <a href='https://www.cbs.nl/nl-nl/cijfers/detail/83926NED?dl=6C56B#'>Centraal Bureau voor Statistiek</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_trade</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../datasets/table__83926NED.csv&#39;</span><span class="p">)</span>
+<span class="n">df_trade</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SITC</th>
+      <th>Landen</th>
+      <th>Perioden</th>
+      <th>Invoerwaarde (mln euro)</th>
+      <th>Uitvoerwaarde (mln euro)</th>
+      <th>Handelsbalans (mln euro)</th>
+      <th>Jaarmutatie invoerwaarde (%)</th>
+      <th>Jaarmutatie uitvoerwaarde (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Totaal goederen</td>
+      <td>Totaal landen</td>
+      <td>2021 mei</td>
+      <td>40.738</td>
+      <td>46.097</td>
+      <td>5.359</td>
+      <td>33,6</td>
+      <td>35,8</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Totaal goederen</td>
+      <td>Totaal landen</td>
+      <td>2021 juni</td>
+      <td>44.033</td>
+      <td>50.799</td>
+      <td>6.766</td>
+      <td>24,9</td>
+      <td>29,5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Totaal goederen</td>
+      <td>Totaal landen</td>
+      <td>2021 juli</td>
+      <td>43.261</td>
+      <td>48.890</td>
+      <td>5.629</td>
+      <td>24,3</td>
+      <td>21,6</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Totaal goederen</td>
+      <td>Totaal landen</td>
+      <td>2021 augustus</td>
+      <td>42.955</td>
+      <td>47.161</td>
+      <td>4.206</td>
+      <td>34,6</td>
+      <td>31,9</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Totaal goederen</td>
+      <td>Totaal landen</td>
+      <td>2021 september</td>
+      <td>46.421</td>
+      <td>52.181</td>
+      <td>5.760</td>
+      <td>26,3</td>
+      <td>24,0</td>
+    </tr>
+  </tbody>
+</table>
 </div></div></div>
 </div>
 </section>
@@ -987,6 +1218,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-greenhouse-gas-emission-in-the-netherlands">Dataset 1 : Greenhouse gas emission in the Netherlands</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-greenhouse-gas-emission-around-the-world">Dataset 2 : Greenhouse gas emission around the world</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-statistics-per-country">Dataset 3 : Statistics per Country</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-4-global-air-pollution">Dataset 4 : Global Air Pollution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-5-agricultural-companies-in-the-netherlands">Dataset 5 : Agricultural companies in the Netherlands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-6">Dataset 6 :</a></li>
 </ul>
   </nav></div>
 
