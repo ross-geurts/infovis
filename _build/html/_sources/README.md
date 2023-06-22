@@ -1,6 +1,6 @@
 # Datastory : Group P3
 
-This is the datastory of project group P3. We are doing our data story on the greenhouse gas emissions by the Dutch agricultural sector. In the data story we research arguments supporting the continuing emission and arguments supporting a cut in emission by the farmers.
+This is the datastory of project group P3 in the course Infomation Visualization at the University of Amsterdam. We are doing our data story on the greenhouse gas emissions by the Dutch agricultural sector. In the data story we research arguments supporting the continuing emission and arguments supporting a cut in emission by the farmers.
 
 
 Group Members:
