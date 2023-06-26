@@ -155,7 +155,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Dataset and Preprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arguments_for.html">In Support of Agriculture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arguments_against.html">Agriculture Needs Change</a></li>
-<li class="toctree-l1"><a class="reference internal" href="conclusion.html">Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conclusion.html">Conclusion and References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reflection.html">Reflection and Group Distribution</a></li>
 </ul>
 
@@ -404,7 +404,12 @@ document.write(`
 <section id="dataset-1-greenhouse-gas-emission-in-the-netherlands">
 <h2>Dataset 1 : Greenhouse gas emission in the Netherlands<a class="headerlink" href="#dataset-1-greenhouse-gas-emission-in-the-netherlands" title="Permalink to this heading">#</a></h2>
 <p>This dataset includes emissions of the gases carbon dioxide, methane, and nitrogen in the Netherlands from 1990 up until 2017. The data is ordered by emission source, such as pharmaceutical industry, households, agriculture and fishery. The emissions themselves are measured in million kilograms, and are ratio values. This dataset can be used to calculate increase in greenhouse gas emissions and compare against datasets of the emissions of other countries. The dataset was taken from <a href='https://www.kaggle.com/datasets/janheindejong/greenhouse-gas-emissions-in-the-netherlands?select=IPCC_emissions.csv'> Kaggle </a> and needed to be seperated by semicolon to be deemed usable.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
@@ -413,6 +418,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -494,13 +500,19 @@ document.write(`
 <section id="dataset-2-greenhouse-gas-emission-around-the-world">
 <h2>Dataset 2 : Greenhouse gas emission around the world<a class="headerlink" href="#dataset-2-greenhouse-gas-emission-around-the-world" title="Permalink to this heading">#</a></h2>
 <p>This dataset includes data about the greenhouse gas emissions from various countries in the world like Australia or France, and certain areas like the European Union from the years 1990 up to 2014. The gases of which the emissions are measured are among others, nitrogen, carbon dioxide, sulphur and methane, along with a total of all GHG gas emission, which are categorical values. The values of the emission themselves are ratio values and are measured in million kilograms. The dataset was taken from <a href='https://www.kaggle.com/datasets/unitednations/international-greenhouse-gas-emissions'>Kaggle</a> and did not need to be cleaned up.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_gas_emission</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../datasets/greenhouse_gas_inventory_data_data.csv&quot;</span><span class="p">)</span>
 <span class="n">df_gas_emission</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -570,13 +582,19 @@ document.write(`
 <section id="dataset-3-statistics-per-country">
 <h2>Dataset 3 : Statistics per Country<a class="headerlink" href="#dataset-3-statistics-per-country" title="Permalink to this heading">#</a></h2>
 <p>This dataset shows several different statistics from nearly every county in de United Nations in 2017. Some of these 50 statistics are population, GDP, agriculture economy, internet use, and emission estimates. The values of these variables are denoted in their name, like number, percent or square kilometer, and are nominal, ordinal or ratio values. The dataset was preprocessed to include only a few relevant European countries before it was used and can be found on <a href='https://www.kaggle.com/datasets/sudalairajkumar/undata-country-profiles?select=kiva_country_profile_variables.csv'>Kaggle</a>.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eu_country_profile</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../datasets/EUonly_country_profile_variables.csv&quot;</span><span class="p">)</span>
 <span class="n">eu_country_profile</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -749,13 +767,19 @@ document.write(`
 <section id="dataset-4-global-air-pollution">
 <h2>Dataset 4 : Global Air Pollution<a class="headerlink" href="#dataset-4-global-air-pollution" title="Permalink to this heading">#</a></h2>
 <p>This dataset contains geolocated data on greenhouse gas emissions and AQI of air pollution of large cities in nearly all countries. Some of the attributes are the overall AQI value and category, as well as the AQI value and category for the gases N2O, CO and the Ozone. The dataset can be used to compare air pollution between different countries. The dataset shown here was not processed, but was cleaned before using by grouping the data by country and aggregating the temperature values. The dataset can be found on <a href='https://www.kaggle.com/datasets/hasibalmuzdadid/global-air-pollution-dataset'>Kaggle</a>.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_pollution</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../datasets/global_air_pollution_dataset.csv&quot;</span><span class="p">)</span>
 <span class="n">df_pollution</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -873,13 +897,19 @@ document.write(`
 <section id="dataset-5-agricultural-companies-in-the-netherlands">
 <h2>Dataset 5 : Agricultural companies in the Netherlands<a class="headerlink" href="#dataset-5-agricultural-companies-in-the-netherlands" title="Permalink to this heading">#</a></h2>
 <p>This dataset includes data on the agricultural companies in the Netherlands over the period of 1851-2022. Some variables include the number of companies, the number of companies in livestock and the meat or wheat production. The dataset was preprocessed by appending ‘JJ00’ to the years in the ‘Perioden’ column, as that simplified the comparison between this dataset and dataset 1. The dataset can be found on the website of the <a href='https://www.cbs.nl/nl-nl/cijfers/detail/71904ned#'>Centraal Bureau voor Statistiek</a>.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_agr_comp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../datasets/table__71904ned.csv&#39;</span><span class="p">)</span>
 <span class="n">df_agr_comp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -1052,13 +1082,19 @@ document.write(`
 <section id="dataset-6-import-and-export-of-the-netherlands">
 <h2>Dataset 6 : Import and Export of the Netherlands<a class="headerlink" href="#dataset-6-import-and-export-of-the-netherlands" title="Permalink to this heading">#</a></h2>
 <p>This dataset describes the import income and export income of goods from the Netherlands to countries inside or outside Europe. The dataset is separated by categories such as  meat/meat products, fruit/vegetables, ect, and it includes data from 2021 and 2022. The dataset was not preprocessed and can be found on the website of the <a href='https://www.cbs.nl/nl-nl/cijfers/detail/83926NED?dl=6C56B#'>Centraal Bureau voor Statistiek</a>.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_trade</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../datasets/table__83926NED.csv&#39;</span><span class="p">)</span>
 <span class="n">df_trade</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
