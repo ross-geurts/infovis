@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="In Support of Agriculture" href="arguments_for.html" />
-    <link rel="prev" title="Greenhouse Gas Emissions in the Agricultural Sector of the Netherlands" href="home.html" />
+    <link rel="prev" title="Introduction" href="home.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -147,7 +147,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="home.html">
-                    Greenhouse Gas Emissions in the Agricultural Sector of the Netherlands
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -382,7 +382,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-greenhouse-gas-emission-in-the-netherlands">Dataset 1 : Greenhouse gas emission in the Netherlands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-greenhouse-gas-emission-around-the-world">Dataset 2 : Greenhouse gas emission around the world</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2">Dataset 2 : —</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-statistics-per-country">Dataset 3 : Statistics per Country</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-4-global-air-pollution">Dataset 4 : Global Air Pollution</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-5-agricultural-companies-in-the-netherlands">Dataset 5 : Agricultural companies in the Netherlands</a></li>
@@ -497,87 +497,8 @@ document.write(`
 </div></div></div>
 </div>
 </section>
-<section id="dataset-2-greenhouse-gas-emission-around-the-world">
-<h2>Dataset 2 : Greenhouse gas emission around the world<a class="headerlink" href="#dataset-2-greenhouse-gas-emission-around-the-world" title="Permalink to this heading">#</a></h2>
-<p>This dataset includes data about the greenhouse gas emissions from various countries in the world like Australia or France, and certain areas like the European Union from the years 1990 up to 2014. The gases of which the emissions are measured are among others, nitrogen, carbon dioxide, sulphur and methane, along with a total of all GHG gas emission, which are categorical values. The values of the emission themselves are ratio values and are measured in million kilograms. The dataset was taken from <a href='https://www.kaggle.com/datasets/unitednations/international-greenhouse-gas-emissions'>Kaggle</a> and did not need to be cleaned up.</p>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_gas_emission</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../datasets/greenhouse_gas_inventory_data_data.csv&quot;</span><span class="p">)</span>
-<span class="n">df_gas_emission</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>country_or_area</th>
-      <th>year</th>
-      <th>value</th>
-      <th>category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Australia</td>
-      <td>2014</td>
-      <td>393126.946994</td>
-      <td>carbon_dioxide_co2_emissions_without_land_use_...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Australia</td>
-      <td>2013</td>
-      <td>396913.936530</td>
-      <td>carbon_dioxide_co2_emissions_without_land_use_...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Australia</td>
-      <td>2012</td>
-      <td>406462.847704</td>
-      <td>carbon_dioxide_co2_emissions_without_land_use_...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Australia</td>
-      <td>2011</td>
-      <td>403705.528314</td>
-      <td>carbon_dioxide_co2_emissions_without_land_use_...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Australia</td>
-      <td>2010</td>
-      <td>406200.993184</td>
-      <td>carbon_dioxide_co2_emissions_without_land_use_...</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
+<section id="dataset-2">
+<h2>Dataset 2 : —<a class="headerlink" href="#dataset-2" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="dataset-3-statistics-per-country">
 <h2>Dataset 3 : Statistics per Country<a class="headerlink" href="#dataset-3-statistics-per-country" title="Permalink to this heading">#</a></h2>
@@ -1224,7 +1145,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Greenhouse Gas Emissions in the Agricultural Sector of the Netherlands</p>
+        <p class="prev-next-title">Introduction</p>
       </div>
     </a>
     <a class="right-next"
@@ -1255,7 +1176,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-greenhouse-gas-emission-in-the-netherlands">Dataset 1 : Greenhouse gas emission in the Netherlands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-greenhouse-gas-emission-around-the-world">Dataset 2 : Greenhouse gas emission around the world</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2">Dataset 2 : —</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-statistics-per-country">Dataset 3 : Statistics per Country</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-4-global-air-pollution">Dataset 4 : Global Air Pollution</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-5-agricultural-companies-in-the-netherlands">Dataset 5 : Agricultural companies in the Netherlands</a></li>
