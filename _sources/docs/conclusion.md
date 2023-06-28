@@ -1,6 +1,11 @@
 # Conclusion and References
 
 ## Conclusion
+In this data story, we discussed if measures should be taken to reduce the greenhouse gas emission of the agricultural sector. One of the reasons why there should not be any measures taken to lower the emission by the agricultural sector is because the emission of greenhouse gases is lower in the Netherlands than in other countries in the world. Secondly, other countries benefit from agriculture in the Netherlands, because the Netherlands has good natural suitability for agriculture. Moreover, the emission of nitrous oxide in the Netherlands has decreased over the years. Lastly, the emission of carbon dioxide in the Netherlands is way higher than the emission of nitrous oxide. Therefore, it would be reasonable to focus more on reducing the emission of carbon dioxide.
+
+There are also reasons why there should be measures taken to lower the emission by the agricultural sector. First of all, although the agricultural sector emits much less carbon dioxide than other sectors, they produce more nitrous oxide, which is significantly more damaging to the climate. Despite the fact that the emission of nitrous oxide has decreased over the years, the nitrous oxide emission per farm increases, while the amount of farms in the Netherlands has decreased as well. Furthermore, the export income of meat and meat products is lower than the export income of fruits and vegetables, while the production of meat produces more nitrous oxide. 
+
+To conclude, this data story showed that there are more factors than just the climate to consider when deciding whether to take measures against the agricultural sector or not. The government should also evaluate how the economy is doing and recognize the important role the farmers play in the society in the Netherlands. Taking all these aspects into account, the government can make an informed and fair decision on whether or not they should take action against the emissions from the agricultural sector. 
 
 ## References
 Broeikasgas N2O neemt versneld toe. (2022, August 25). KNMI. Retrieved June 26, 2023, from https://www.knmi.nl/over-het-knmi/nieuws/broeikasgas-n2o-neemt-versneld-toe
@@ -16,6 +21,8 @@ Overview of Greenhouse Gases | US EPA. (2023, April 13). US EPA. Retrieved June 
 Ministerie van Buitenlandse Zaken. (2017, April 30). Agriculture and food: the Netherlands and Bangladesh. Bangladesh | Netherlandsandyou.nl. https://www.netherlandsandyou.nl/your-country-and-the-netherlands/bangladesh/and-the-netherlands/agriculture-and-food#:~:text=The%20Netherlands%20is%20the%20second,has%20an%20extensive%20logistics%20network.
 
 NOS nieuws. (2022, June 3). Uitstoot stikstof moet in sommige gebieden met 70 tot 80 procent omlaag. NOS. https://nos.nl/artikel/2431254-uitstoot-stikstof-moet-in-sommige-gebieden-met-70-tot-80-procent-omlaag
+
+NOS. (2022, June 10). Kabinet neemt vandaag stikstofbesluit met grote gevolgen voor boeren. NOS. https://nos.nl/collectie/13901/artikel/2432120-kabinet-neemt-vandaag-stikstofbesluit-met-grote-gevolgen-voor-boeren
 
 Provincie Zeeland. (n.d.). Waarom is stikstof een probleem? Provincie Zeeland. https://www.zeeland.nl/onderwerpen/natuur-en-landschap/aanpak-stikstof/waarom-stikstof-een-probleem 
 
