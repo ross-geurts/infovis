@@ -5,7 +5,7 @@ In this data story, we discussed if measures should be taken to reduce the green
 
 There are also reasons why lowering emissions is preferable. First of all, the agricultural sector emits more N2O than other sectors, which is significantly more damaging to the climate. Secondly, despite the fact that the emission of N2O has decreased over the years, the N2O emission per farm increases. Furthermore, the export income of meat and meat products is lower than the export income of fruits and vegetables, while the production of meat produces more N2O. 
 
-To conclude, this data story showed that there are more factors than just the climate to consider when deciding whether to take measures against the agricultural sector or not. Taking the aspects of economy and the role of farmers in society into account, the government can make an informed and fair decision on whether action should be taken against the emissions from the agricultural sector. 
+To conclude, this data story showed that there are more factors than just the climate to consider when deciding whether to take measures against the agricultural sector or not. Taking the aspects of economy and the role of farmers in society into account, the government can make an informed and fair decision on whether action should be taken against the emissions from the agricultural sector.
 
 ## **References**
 Broeikasgas N2O neemt versneld toe. (2022, August 25). KNMI. Retrieved June 26, 2023, from https://www.knmi.nl/over-het-knmi/nieuws/broeikasgas-n2o-neemt-versneld-toe
