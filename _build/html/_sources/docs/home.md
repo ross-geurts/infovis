@@ -1,4 +1,4 @@
-# Introduction
+# **Introduction**
 Climate change is a big problem, and one of the main causes is greenhouse gas emission. The greenhouse effect is an important topic of discussion in The Netherlands. According to politicians in the Netherlands, the nitrous oxide produced by the agricultural sector has a strong negative effect on the environment [(NOS nieuws, 2022)](https://nos.nl/collectie/13901/artikel/2432120-kabinet-neemt-vandaag-stikstofbesluit-met-grote-gevolgen-voor-boeren).  
 
 When there is too much nitrous oxide in the ground, plants perish and the biodiversity decreases. [(Provincie Zeeland, n.d.)](https://www.zeeland.nl/onderwerpen/natuur-en-landschap/aanpak-stikstof/waarom-stikstof-een-probleem ). Therefore, measures that are disadvantageous to the farmers are taken by the government to reduce nitrous oxide emissions. They have to reduce the size of their farm or are forced to sell it [(NOS nieuws, 2022)](https://nos.nl/artikel/2431254-uitstoot-stikstof-moet-in-sommige-gebieden-met-70-tot-80-procent-omlaag). This gives rise to the question: are these measures reasonable?
